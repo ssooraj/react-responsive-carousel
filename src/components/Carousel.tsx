@@ -634,11 +634,13 @@ export default class Carousel extends React.Component<Props, State> {
     };
 
     onClickNext = () => {
-        this.increment(1, false);
+      let incrementInterval =  this.props.slidesCount;
+      this.increment(incrementInterval, false);
     };
 
     onClickPrev = () => {
-        this.decrement(1, false);
+      let decrementInterval =  this.props.slidesCount;
+      this.decrement(decrementInterval, false);
     };
 
     onSwipeForward = () => {
